@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cart = ()=>{
+const PlaceOrderCart = ()=>{
     return (
         <div>
             <h1>

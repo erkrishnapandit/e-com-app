@@ -1,4 +1,10 @@
 import logo_richlook from './logo_richlook.png';
+import brand_logo_1 from './brand_logo_1.jpeg';
+import brand_logo_2 from './brand_logo_2.jpeg';
+import search_icon from './search_icon.png';
+import user_icon from './user_icon.png';
+import cart_icon from './cart_icon.png';
+import menu_icon from './menu_icon.png';   
 import img_1_1 from './img_1_1.png';
 import img_1_2 from './img_1_2.png';
 import img_1_3 from './img_1_3.png';
@@ -150,6 +156,12 @@ import img_25_5 from './img_25_5.png';
 
 export const assets = {
     logo_richlook,
+    brand_logo_1,
+    brand_logo_2,
+    search_icon,
+    user_icon,
+    cart_icon,
+    menu_icon,
     img_1_1,
     img_1_2,
     img_1_3,
