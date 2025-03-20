@@ -1,35 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { assets } from '../assets/assets.js';
 import { Link, NavLink } from 'react-router-dom';
 const Navbar = ()=>{
+
+    const [visible, setVisible] = useState(false);
+
     return (
         <div className='flex justify-between bg-gray-200 px-4 items-center font-medium'>
             
             <img src={assets.logo_richlook} className='w-36' alt="logo" />
             <ul className='hidden sm:flex items-center justify-between gap-5 p-5 test-black'>
 
-                <NavLink to='/' className='flex flex-col text-black'>
-                    <p >Home</p>
-                    <hr className='bg-gray-800'/>
+                <NavLink to='/' className='flex flex-col text-black  '>
+                    <p >HOME</p>
+                    <hr className='bg-gray-800 h-[1.5px] hidden'/>
                 </NavLink>
 
-                <NavLink to='/collection' className='flex flex-col text-black'>
-                    <p >Collection</p>
-                    <hr className='bg-gray-800'/>
+                <NavLink to='/collection' className='flex flex-col text-black '>
+                    <p >COLLECTION</p>
+                    <hr className='bg-gray-800 h-[1.5px] hidden'/>
                 </NavLink>
 
-                <NavLink to='/about' className='flex flex-col text-black'>
-                    <p >About</p>
-                    <hr className='bg-gray-800'/>
+                <NavLink to='/about' className='flex flex-col text-black '>
+                    <p >ABOUT</p>
+                    <hr className='bg-gray-800 h-[1.5px] hidden'/>
                 </NavLink>
 
-                <NavLink to='/contact' className='flex flex-col text-black'>
-                    <p >Contact</p>
-                    <hr className='bg-gray-800'/>
+                <NavLink to='/contact' className='flex flex-col text-black '>
+                    <p >CONTACT</p>
+                    <hr className='bg-gray-800 h-[1.5px] hidden'/>
                 </NavLink>
 
             </ul>
-            <div className='flex items-center flex-row gap-2'>
+            <div className='flex  items-center flex-row gap-2'>
                 <img src={assets.search_icon} className='w-10 min-w-6 p-1 cursor-pointer' alt="search_icon" />
                 <div className='group relative'> 
                     <img src={assets.user_icon} className='w-10 min-w-6 p-1 cursor-pointer' alt="user_icon" />
@@ -45,10 +48,22 @@ const Navbar = ()=>{
                     <img src={assets.cart_icon} className='w-10 min-w-5' alt="" />
                     <p className='absolute right-[4px] bottom-[4px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[10px]'>10</p>
                 </Link>
-                <img src={assets.menu_icon} className='w-6 sm:hidden cursor-pointer' alt="" />
-               
+                <img onClick={()=>setVisible(true)} src={assets.menu_icon} className='w-6 sm:hidden cursor-pointer' alt="" />
             </div>
 
+            {/* Sidebar menu for small screen */}
+            <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-gray-100 transition-all ${visible ? 'w-[200px]':'w-0'}`}>
+                <div className='flex flex-col text-gray-600'> 
+                    <div onClick={()=>setVisible(false)} className='flex items-center py-4 cursor-pointer'>
+                        <img src={assets.back_arrows} className='h-3 mx-2 my-2' alt="" />
+                        <p>Back</p>
+                    </div>
+                    <NavLink onClick={()=>setVisible(false)} className='border border-gray-300 p-3 text-center' to='/'>HOME</NavLink>
+                    <NavLink onClick={()=>setVisible(false)} className='border border-gray-300 p-3 text-center' to='/collection'>Collection</NavLink>
+                    <NavLink onClick={()=>setVisible(false)} className='border border-gray-300 p-3 text-center' to='/about'>About</NavLink>
+                    <NavLink onClick={()=>setVisible(false)} className='border border-gray-300 p-3 text-center' to='/contact'>Contact</NavLink>
+                </div>
+            </div>
         </div>
     )
 }

@@ -4,7 +4,8 @@ import brand_logo_2 from './brand_logo_2.jpeg';
 import search_icon from './search_icon.png';
 import user_icon from './user_icon.png';
 import cart_icon from './cart_icon.png';
-import menu_icon from './menu_icon.png';   
+import menu_icon from './menu_icon.png'; 
+import back_arrows from './back_arrows.png';  
 import img_1_1 from './img_1_1.png';
 import img_1_2 from './img_1_2.png';
 import img_1_3 from './img_1_3.png';
@@ -159,6 +160,7 @@ export const assets = {
     brand_logo_1,
     brand_logo_2,
     search_icon,
+    back_arrows,
     user_icon,
     cart_icon,
     menu_icon,
