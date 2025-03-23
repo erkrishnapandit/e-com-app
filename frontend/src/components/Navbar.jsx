@@ -6,9 +6,11 @@ const Navbar = ()=>{
     const [visible, setVisible] = useState(false);
 
     return (
-        <div className='flex justify-between bg-gray-200 px-4 items-center font-medium'>
+        <div className='flex justify-between px-8 items-center font-medium'>
             
-            <img src={assets.logo_richlook} className='w-36' alt="logo" />
+            <Link to='/'>
+                <img src={assets.logo_richlook} className='w-36' alt="logo" />
+            </Link> 
             <ul className='hidden sm:flex items-center justify-between gap-5 p-5 test-black'>
 
                 <NavLink to='/' className='flex flex-col text-black  '>
@@ -59,9 +61,9 @@ const Navbar = ()=>{
                         <p>Back</p>
                     </div>
                     <NavLink onClick={()=>setVisible(false)} className='border border-gray-300 p-3 text-center' to='/'>HOME</NavLink>
-                    <NavLink onClick={()=>setVisible(false)} className='border border-gray-300 p-3 text-center' to='/collection'>Collection</NavLink>
-                    <NavLink onClick={()=>setVisible(false)} className='border border-gray-300 p-3 text-center' to='/about'>About</NavLink>
-                    <NavLink onClick={()=>setVisible(false)} className='border border-gray-300 p-3 text-center' to='/contact'>Contact</NavLink>
+                    <NavLink onClick={()=>setVisible(false)} className='border border-gray-300 p-3 text-center' to='/about'>ABOUT</NavLink>
+                    <NavLink onClick={()=>setVisible(false)} className='border border-gray-300 p-3 text-center' to='/collection'>COLLECTION</NavLink>
+                    <NavLink onClick={()=>setVisible(false)} className='border border-gray-300 p-3 text-center' to='/contact'>CONTACT</NavLink>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ import React from 'react';
 import {assets} from './assets/assets.js';
 import {Routes, Route} from 'react-router-dom';
 import Navbar from './components/Navbar.jsx'
-import Home from './Pages/Home.jsx';
+import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Cart from './pages/Cart.jsx';
 import Collection from './pages/Collection.jsx';
@@ -17,7 +17,7 @@ import PlaceOrder from './pages/PlaceOrder.jsx';
 
 function App() {
   return (
-   <div className='px-4 sm:px-[2vw] md:px-[2vw]  lg:px-[2vw]'>
+   <div className='px-4 sm:px-[4vw] md:px-[6vw]  lg:px-[8vw]'>
     {/* <h1>App component</h1> */}
     <Navbar/>
     <Routes>
