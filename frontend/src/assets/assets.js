@@ -1,14 +1,17 @@
 // importing all images
 import logo_richlook from './logo_richlook.png';
+import exchange_icon from './exchange_icon.png';
 import brand_logo_1 from './brand_logo_1.jpeg';
 import brand_logo_2 from './brand_logo_2.jpeg';
+import support_icon from './support_icon.png';
+import return_icon from './return_icon.png';
+import back_arrows from './back_arrows.png';  
 import search_icon from './search_icon.png';
+import hero_icon1 from './hero_icon1.png';
 import user_icon from './user_icon.png';
 import cart_icon from './cart_icon.png';
 import menu_icon from './menu_icon.png'; 
-import hero_icon1 from './hero_icon1.png';
 import hero_icon from './hero_icon.png';
-import back_arrows from './back_arrows.png';  
 import img_1_1 from './img_1_1.png';
 import img_1_2 from './img_1_2.png';
 import img_1_3 from './img_1_3.png';
@@ -160,9 +163,12 @@ import img_25_5 from './img_25_5.png';
 
 // exporting all images
 export const assets = {
+    exchange_icon,
     logo_richlook,
+    support_icon,
     brand_logo_1,
     brand_logo_2,
+    return_icon,
     search_icon,
     back_arrows,
     hero_icon1,
