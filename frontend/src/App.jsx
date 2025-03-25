@@ -12,6 +12,8 @@ import Login from './pages/Login.jsx';
 import Order from './pages/Order.jsx';
 import Product from './pages/Product.jsx';
 import PlaceOrder from './pages/PlaceOrder.jsx';
+import Footer from './components/Footer.jsx';
+
 
 
 
@@ -31,6 +33,7 @@ function App() {
       <Route path='./product' element={<Product/>}/>
       <Route path='./placeOrder' element={<PlaceOrder/>}/>
     </Routes>
+    <Footer/>
    </div>
   )
 }
