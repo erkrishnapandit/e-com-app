@@ -66,13 +66,6 @@ To deploy the project on **Netlify**, follow these steps:
    netlify deploy --prod
    ```
 
-## 📌 Environment Variables
-Create a `.env` file in the root directory and add your API keys:
-```
-REACT_APP_API_URL=your_api_url
-REACT_APP_FIREBASE_KEY=your_firebase_key
-```
-
 ## 🤝 Contribution
 Contributions are welcome! To contribute:
 1. Fork the repository
