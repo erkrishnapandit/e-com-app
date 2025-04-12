@@ -27,30 +27,23 @@ const Collection = ()=>{
         }
     }
 
-    
     const applyFilter = () =>{
         let productCopy = products.slice();
         let filteredProduct = [];
 
-        if(category.length>0 && subCategory.length>0){
-            filteredProduct = productCopy.filter(item=> category.includes(item.category));
-            filteredProduct = filteredProduct.filter(item=> subCategory.includes(item.subCategory));
+        if(category.length>0){
+            productCopy = productCopy.filter(item=>category.includes(item.category));
         }
-        else if(category.length>0) filteredProduct = productCopy.filter(item=> category.includes(item.category));
-        else if(subCategory.length>0) filteredProduct = productCopy.filter(item=> subCategory.includes(item.subCategory));
-        else filteredProduct = productCopy;
-        
-        setFilterProduct(filteredProduct);
+
+        if(subCategory.length>0){
+            productCopy = productCopy.filter(item=>subCategory.includes(item.subCategory));
+        }
+        setFilterProduct(productCopy);
     }
     
     useEffect(()=>{
-        setFilterProduct(products)
-    },[]);
-    
-    useEffect(()=>{
-        applyFilter()
+        applyFilter();
     },[category, subCategory]);
-
 
     return (
         <div className='flex flex-col sm:flex-row gap-2 sm:gap-10 px-8 pt-10 border-t border-gray-300'  >
