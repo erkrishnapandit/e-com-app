@@ -2,9 +2,9 @@
 
 ## 🚀 Overview
 This is a fully responsive **E-commerce Web Application** built using **React**. The application allows users to browse products, add items to their cart, and proceed to checkout seamlessly.
----
--**Live Demo** https://kp-image-search.netlify.app/
----
+
+**Live Demo** https://kp-image-search.netlify.app/
+
 ## 🌟 Features
 - 🛍️ Browse Products
 - 🔍 Search and Filter Options
