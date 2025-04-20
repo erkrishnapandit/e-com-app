@@ -13,6 +13,7 @@ import Order from './pages/Order.jsx';
 import Product from './pages/Product.jsx';
 import PlaceOrder from './pages/PlaceOrder.jsx';
 import Footer from './components/Footer.jsx';
+import SearchBar from './components/SearchBar.jsx';
 
 
 
@@ -22,6 +23,7 @@ function App() {
    <div className='px-4 sm:px-[4vw] md:px-[6vw]  lg:px-[8vw]'>
     {/* <h1>App component</h1> */}
     <Navbar/>
+    <SearchBar/>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/about' element={<About/>}/>

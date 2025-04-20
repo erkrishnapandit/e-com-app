@@ -9,6 +9,7 @@ import back_arrows from './back_arrows.png';
 import search_icon from './search_icon.png';
 import hero_icon1 from './hero_icon1.png';
 import down_arrow from './down_arrow.png';
+import close_icon from './close_icon.png';
 import arrowhead from './arrowhead.png';
 import user_icon from './user_icon.png';
 import cart_icon from './cart_icon.png';
@@ -174,6 +175,7 @@ export const assets = {
     search_icon,
     back_arrows,
     down_arrow,
+    close_icon,
     arrowhead,
     hero_icon1,
     hero_icon,
