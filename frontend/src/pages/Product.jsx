@@ -2,6 +2,7 @@ import React, {useContext, useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { ShopContext } from '../context/shopContext';
 import { assets } from '../assets/assets';
+import RelatedProduct from '../components/RelatedProduct';
 
 const Product = ()=>{
 
@@ -30,26 +31,26 @@ const Product = ()=>{
     
     return productData ? (
         <div className=''>
-            {/* ----------Product Data----------- */}
-            <div className='flex flex-col sm:flex-row gap-4 border border-purpel-600'>
-                {/* -------------Product Image---------- */}
+            {/* ---------- Product Data ----------- */}
+            <div className='flex flex-col sm:flex-row gap-4'>
+                {/* ------------- Product Image ---------- */}
                 <div className='flex-1 flex flex-col-reverse sm:flex-row gap-3'>
-                    <div className='flex sm:flex-col overflow-x-auto h-[75vh] gap-1 border border-red-400 justify-between sm:justify-normal sm:w-[20%] w-full'>
+                    <div className='flex sm:flex-col overflow-x-auto h-[75vh] gap-1 justify-between sm:justify-normal sm:w-[20%] w-full'>
                         {productData.image.map((item, index)=>{
                             return(
                                 <img onClick={()=>setImage(item)} src={item} key={index} className='w-[24%] sm:w-full mb-3 flex-shrink-0 cursor-pointer' />
                             )
                         })}
                     </div>
-                    <div className='border border-green-600 w-full sm:w-[80%]'>
+                    <div className='w-full sm:w-[80%]'>
                         <img className='w-full h-auto' src={image} alt="" />
                     </div>
                 </div>
 
-                {/* --------------Product Info--------- */}
-                <div className='flex-1 border border-brown'>
+                {/* -------------- Product Info --------- */}
+                <div className='flex-1'>
                     <h1 className='font-medium text-2xl mt-2'>{productData.name}</h1>
-                    <div className='flex border item-center gap-1 mt-2 p-1'>
+                    <div className='flex item-center gap-1 mt-2 p-1'>
                         <img src={assets.star_color} alt="" className='w-3' />
                         <img src={assets.star_color} alt="" className='w-3' />
                         <img src={assets.star_color} alt="" className='w-3' />
@@ -78,7 +79,7 @@ const Product = ()=>{
                     </div>
                 </div>
             </div>
-            {/* -------------------Discription & Review Section------------------- */}
+            {/* ------------------- Discription & Review Section ------------------- */}
             <div className='mt-10'>
                 <div className='flex'>
                     <b className='border px-5 py-3 text-sm'>Discription</b>
@@ -89,6 +90,8 @@ const Product = ()=>{
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit similique nam dicta a inventore et, incidunt pariatur qui laboriosam vitae!</p>
                 </div>
             </div>
+            {/* --------------- Display Related product --------------- */}
+            <RelatedProduct category={productData.category} subCategory={productData.subCategory}/>
         </div>
     ):(
         <div className='opecity-0'> </div>
