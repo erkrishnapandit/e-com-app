@@ -10,6 +10,8 @@ import search_icon from './search_icon.png';
 import hero_icon1 from './hero_icon1.png';
 import down_arrow from './down_arrow.png';
 import close_icon from './close_icon.png';
+import star_color from './star_color.png';
+import star_white from './star_white.png';
 import arrowhead from './arrowhead.png';
 import user_icon from './user_icon.png';
 import cart_icon from './cart_icon.png';
@@ -178,6 +180,8 @@ export const assets = {
     close_icon,
     arrowhead,
     hero_icon1,
+    star_white,
+    star_color,
     hero_icon,
     user_icon,
     cart_icon,
