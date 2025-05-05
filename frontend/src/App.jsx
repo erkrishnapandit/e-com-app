@@ -14,6 +14,7 @@ import Product from './pages/Product.jsx';
 import PlaceOrder from './pages/PlaceOrder.jsx';
 import Footer from './components/Footer.jsx';
 import SearchBar from './components/SearchBar.jsx';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -22,6 +23,7 @@ function App() {
   return (
    <div className='px-4 sm:px-[4vw] md:px-[6vw]  lg:px-[8vw]'>
     {/* <h1>App component</h1> */}
+    <ToastContainer/>
     <Navbar/>
     <SearchBar/>
     <Routes>
