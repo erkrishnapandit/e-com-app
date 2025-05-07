@@ -17,6 +17,7 @@ import user_icon from './user_icon.png';
 import cart_icon from './cart_icon.png';
 import menu_icon from './menu_icon.png'; 
 import hero_icon from './hero_icon.png';
+import bin_icon from './bin_icon.png';
 import img_1_1 from './img_1_1.png';
 import img_1_2 from './img_1_2.png';
 import img_1_3 from './img_1_3.png';
@@ -186,6 +187,7 @@ export const assets = {
     user_icon,
     cart_icon,
     menu_icon,
+    bin_icon,
     img_1_1,
     img_1_2,
     img_1_3,

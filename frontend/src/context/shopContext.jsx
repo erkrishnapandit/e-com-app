@@ -58,6 +58,8 @@ const ShopContextProvider = (props)=>{
         return totalCount;
     }
 
+    
+
     const value = {
         products,
         currency,
@@ -67,7 +69,9 @@ const ShopContextProvider = (props)=>{
         showSearch,
         setShowSearch,
         addToCart,
-        getCartCount
+        getCartCount,
+        cartItem, 
+        setCartItem
     }
 
     return (
