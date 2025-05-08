@@ -2,10 +2,11 @@ import React, { useState, useContext, useEffect } from 'react';
 import { ShopContext } from '../context/shopContext';
 import Title from '../components/Title';
 import { assets } from '../assets/assets';
+import CartTotal from '../components/CartTotal';
 
 const Cart = ()=>{
 
-    const {products, currency, cartItem } = useContext(ShopContext);
+    const {products, currency, cartItem, updateQuantity } = useContext(ShopContext);
 
     const [cartDate, setCartData] = useState([]);
 
@@ -53,13 +54,19 @@ const Cart = ()=>{
                                 </div>
                             </div>
                         
-                            <input className='border max-w-10 sm:max-w-20 p-1 sm:p-2 py-1' type="number" min={1} defaultValue={item.quantity} />
-                            <img className='w-6 mr-4 my-auto sm:w-8 cursor-pointer' src={assets.bin_icon} alt="" />
+                            <input onChange={(e)=>e.target.value === '' || e.target.value === '0' ? null : updateQuantity(item.id, item.size, Number(e.target.value))} className='border h-10 my-auto max-w-10 sm:max-w-20 p-1 sm:p-2 py-1' type="number" min={1} defaultValue={item.quantity} />
+                            <img onClick={()=>updateQuantity(item.id, item.size, 0)} className='w-6 mr-4 my-auto sm:w-8 cursor-pointer' src={assets.bin_icon} alt="" />
                         </div>
                     )
                 
                 })
             }
+           </div>
+           <div className='flex justify-end my-20'>
+            <div className='w-full sm:w-[450px]'>
+                <CartTotal/>
+            </div>
+        
            </div>
         </div>
     )
