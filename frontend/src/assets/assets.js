@@ -1,12 +1,14 @@
 // importing all images
 import logo_richlook from './logo_richlook.png';
 import exchange_icon from './exchange_icon.png';
+import razorpay_icon from './razorpay_icon.png';
 import brand_logo_1 from './brand_logo_1.jpeg';
 import brand_logo_2 from './brand_logo_2.jpeg';
 import support_icon from './support_icon.png';
 import return_icon from './return_icon.png';
 import back_arrows from './back_arrows.png';  
 import search_icon from './search_icon.png';
+import stripe_icon from './stripe_icon.png';
 import hero_icon1 from './hero_icon1.png';
 import down_arrow from './down_arrow.png';
 import close_icon from './close_icon.png';
@@ -171,11 +173,13 @@ import img_25_5 from './img_25_5.png';
 export const assets = {
     exchange_icon,
     logo_richlook,
+    razorpay_icon,
     support_icon,
     brand_logo_1,
     brand_logo_2,
     return_icon,
     search_icon,
+    stripe_icon,
     back_arrows,
     down_arrow,
     close_icon,

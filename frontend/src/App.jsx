@@ -35,7 +35,7 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/order' element={<Order/>}/>
       <Route path='/product/:productId' element={<Product/>}/>
-      <Route path='/placeOrder' element={<PlaceOrder/>}/>
+      <Route path='/place-order' element={<PlaceOrder/>}/>
     </Routes>
     <Footer/>
    </div>

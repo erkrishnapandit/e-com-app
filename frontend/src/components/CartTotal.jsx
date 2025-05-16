@@ -6,7 +6,7 @@ const CartTotal = ()=>{
     const {currency, delivery_Charge, getCartAmount} = useContext(ShopContext);
     return(
         <div className="w-full">
-            <div className="text-2xl">
+            <div className="text-xl sm:text-2xl">
                 <Title text1={'CART'} text2={'TOTAL'}/>
             </div>
             <div className="flex flex-col gap-4 mt-3 text-sm">

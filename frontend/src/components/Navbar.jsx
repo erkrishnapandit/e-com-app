@@ -58,7 +58,7 @@ const Navbar = ()=>{
 
             {/* Sidebar menu for small screen */}
             <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-gray-100 transition-all ${visible ? 'w-[200px]':'w-0'}`}>
-                <div className='flex flex-col text-gray-600'> 
+                <div className='flex flex-col text-gray-500'> 
                     <div onClick={()=>setVisible(false)} className='flex items-center py-4 cursor-pointer'>
                         <img src={assets.back_arrows} className='h-3 mx-2 my-2' alt="" />
                         <p>Back</p>
