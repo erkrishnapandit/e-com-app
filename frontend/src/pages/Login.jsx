@@ -20,7 +20,7 @@ const Login = ()=>{
                 <p className='cursor-pointer'>Forget Your Password? </p>
                 {currentState === 'Login'
                 ? <p onClick={()=>setCurrentState('Sign Up')} className='cursor-pointer'>Create Account</p> 
-                : <p onClick={()=>setCurrentState('Login')} className='cursor-pointer'>login here</p>}
+                : <p onClick={()=>setCurrentState('Login')} className='cursor-pointer'>Login here</p>}
             </div>
             <button className='cursor-pointer bg-black text-white px-8 py-2 font-light mt-4'>{currentState === 'Login'? 'Sign In' : 'Sign Up'}</button>
         </form>

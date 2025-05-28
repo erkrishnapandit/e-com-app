@@ -5,6 +5,7 @@ import razorpay_icon from './razorpay_icon.png';
 import brand_logo_1 from './brand_logo_1.jpeg';
 import brand_logo_2 from './brand_logo_2.jpeg';
 import support_icon from './support_icon.png';
+import contact_icon from './contact_icon.png';
 import return_icon from './return_icon.png';
 import back_arrows from './back_arrows.png';  
 import search_icon from './search_icon.png';
@@ -14,6 +15,7 @@ import down_arrow from './down_arrow.png';
 import close_icon from './close_icon.png';
 import star_color from './star_color.png';
 import star_white from './star_white.png';
+import about_icon from './about_icon.png';
 import arrowhead from './arrowhead.png';
 import user_icon from './user_icon.png';
 import cart_icon from './cart_icon.png';
@@ -175,12 +177,14 @@ export const assets = {
     logo_richlook,
     razorpay_icon,
     support_icon,
+    contact_icon,
     brand_logo_1,
     brand_logo_2,
     return_icon,
     search_icon,
     stripe_icon,
     back_arrows,
+    about_icon,
     down_arrow,
     close_icon,
     arrowhead,
@@ -399,7 +403,7 @@ export const products = [
         price:1929,
         image:[img_5_1, img_5_2, img_5_3, img_5_4, img_5_5, img_5_6],
         category:"men",
-        subCategory:"topwear",
+        subCategory:"bottemware",
         size:["28", "30", "32", "34", "36"],
         bestseller:true
     },
@@ -411,7 +415,7 @@ export const products = [
         price:2499,
         image:[img_6_1, img_6_2, img_6_3, img_6_4, img_6_5, img_6_6],
         category:"men",
-        subCategory:"Bottom Ware",
+        subCategory:"bottemware",
         size:["28", "30", "32", "34", "36"],
         bestseller:true
     },
@@ -423,7 +427,7 @@ export const products = [
         price:1459,
         image:[img_7_1, img_7_2, img_7_3, img_7_4, img_7_5, img_7_6],
         category:"men",
-        subCategory:"Bottom Ware",
+        subCategory:"bottemware",
         size:["28", "30", "32", "34", "36"],
         bestseller:true
     },
@@ -435,7 +439,7 @@ export const products = [
         price:1999,
         image:[img_8_1, img_8_2, img_8_3, img_8_4, img_8_5, img_8_6],
         category:"men",
-        subCategory:"Bottom Waare",
+        subCategory:"bottemware",
         size:["28", "30", "32", "34", "36"],
         bestseller:true
     },
@@ -447,7 +451,7 @@ export const products = [
         price:1859,
         image:[img_9_1, img_9_2, img_9_3, img_9_4, img_9_5, img_9_6],
         category:"men",
-        subCategory:"Bottom Ware",
+        subCategory:"bottemware",
         size:["28", "30", "32", "34", "36"],
         bestseller:true
     },
@@ -531,7 +535,7 @@ export const products = [
         price:1249,
         image:[img_16_1, img_16_2, img_16_3, img_16_4, img_16_5, img_16_6],
         category:"women",
-        subCategory:"bottomwear",
+        subCategory:"bottemware",
         size:["26", "28", "30", "32", "34"],
         bestseller:true
     },
@@ -543,7 +547,7 @@ export const products = [
         price:1899,
         image:[img_17_1, img_17_2, img_17_3, img_17_4, img_17_5, img_17_6],
         category:"women",
-        subCategory:"bottomwear",
+        subCategory:"bottemware",
         size:["26", "28", "30", "32", "34"],
         bestseller:true
     },
@@ -555,7 +559,7 @@ export const products = [
         price:1429,
         image:[img_18_1, img_18_2, img_18_3, img_18_4, img_18_5, img_18_6],
         category:"women",
-        subCategory:"bottomwear",
+        subCategory:"bottemware",
         size:["26", "28", "30", "32", "34"],
         bestseller:true
     },
@@ -567,7 +571,7 @@ export const products = [
         price:1829,
         image:[img_19_1, img_19_2, img_19_3, img_19_4, img_19_5, img_19_6],
         category:"women",
-        subCategory:"bottomwear",
+        subCategory:"bottemware",
         size:["26", "28", "30", "32", "34"],
         bestseller:true
     },
@@ -578,7 +582,7 @@ export const products = [
         description:"The Pilolo Stay Silly Tee perfectly encapsulates the spirit of childhood with its vibrant and fun design.",
         price:4999,
         image:[img_20_1, img_20_2, img_20_3, img_20_4, img_20_5],
-        category:"Kids",
+        category:"kids",
         subCategory:"topwear",
         size:["1Y", "2Y", "3Y", "4Y", "5Y"],
         bestseller:true
@@ -590,7 +594,7 @@ export const products = [
         description:"The Pilolo Hide and Seek Polo is a playful and unique addition to your little boys wardrobe. This soft cotton blue t-shirt features a fun peek-a-boo polka dot design, where half of the dots are cleverly hidden under a placket. ",
         price:599,
         image:[img_21_1, img_21_2, img_21_3, img_21_4, img_21_5, img_21_6],
-        category:"Kids",
+        category:"kids",
         subCategory:"topwear",
         size:["1Y", "2Y", "3Y", "4Y", "5Y"],
         bestseller:true
@@ -602,7 +606,7 @@ export const products = [
         description:"The Pilolo Cloud Polo is a playful and unique addition to your little boys wardrobe. This soft cotton white polo t-shirt with vibrant colors inspired by the beauty of a sunset Perfect for boys aged 4-9, this t-shirt adds an element of surprise and whimsy to any outfit.",
         price:1089,
         image:[img_22_1, img_22_2, img_22_3, img_22_4, img_22_5],
-        category:"Kids",
+        category:"kids",
         subCategory:"topwear",
         size:["1Y", "2Y", "3Y", "4Y", "5Y"],
         bestseller:true
@@ -614,7 +618,7 @@ export const products = [
         description:"The Pilolo Cloud Polo is a playful and unique addition to your little boys wardrobe. This soft cotton white polo t-shirt with vibrant colors inspired by the beauty of a sunset Perfect for boys aged 4-9, this t-shirt adds an element of surprise and whimsy to any outfit.",
         price:1029,
         image:[img_23_1, img_23_2, img_23_3, img_23_4],
-        category:"Kids",
+        category:"kids",
         subCategory:"topwear",
         size:["1Y", "2Y", "3Y", "4Y", "5Y"],
         bestseller:true
@@ -626,7 +630,7 @@ export const products = [
         description:"The Pilolo Popcorn Tee is a fun and playful addition to your little girls wardrobe. Inspired by a childhood favorite snack, this white t-shirt is detailed with vibrant red ruffle sleeves, adding a touch of whimsy and style. Designed for girls aged 4-9, this tee is perfect for those who love to express their playful side.",
         price:499,
         image:[img_24_1, img_24_2, img_24_3, img_24_4],
-        category:"Kids",
+        category:"kids",
         subCategory:"topwear",
         size:["1Y", "2Y", "3Y", "4Y", "5Y"],
         bestseller:true
@@ -638,7 +642,7 @@ export const products = [
         description:"The Pilolo Hide and Seek Polo is a playful and unique addition to your little boys wardrobe. This soft cotton blue t-shirt features a fun peek-a-boo polka dot design, where half of the dots are cleverly hidden under a placket. Perfect for boys aged 4-9, this t-shirt adds an element of surprise and whimsy to any outfit.",
         price:459,
         image:[img_25_1, img_25_2, img_25_3, img_25_4, img_25_5],
-        category:"Kids",
+        category:"kids",
         subCategory:"topwear",
         size:["1Y", "2Y", "3Y", "4Y", "5Y"],
         bestseller:true
