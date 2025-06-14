@@ -11,7 +11,6 @@ const productSchema = new mongoose.Schema({
     sizes:{type:Array, required:true},
     bestseller:{type:Boolean},
     date:{type:Number, require:true, default:Date.now},
-
 })
 
 const productModel = mongoose.models.product || mongoose.model("product", productSchema);

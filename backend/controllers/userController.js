@@ -11,6 +11,7 @@ const createToken = (id) =>{
 
 // Route for user login
 const loginUser = async(req, res)=>{
+    // res.json({msg:"Login User API is working fine!"})
     try{
         const {email, password} = req.body;
 
@@ -39,7 +40,8 @@ const loginUser = async(req, res)=>{
 
 // Route for user registration
 const registerUser = async(req, res)=>{
-    res.json({msg:"API is working fine!"})
+    // res.json({msg:" Register User API is working fine!"})
+
     try{
         const {name, email, password} = req.body;
 
@@ -71,6 +73,11 @@ const registerUser = async(req, res)=>{
         })
         const user = await newUser.save();
 
+        // Creating a token for the user
+        const token = createToken(user._id);
+
+        res.json({success:true, token});
+
     }catch{
         console.log(error)
         res.status(500).json({success:false, msg: "Internal Server Error"});
@@ -82,4 +89,4 @@ const registerUser = async(req, res)=>{
 const adminLogin = async(req, res)=>{
 
 }
-export{loginUser, registerUser, adminLogin};
+export {loginUser, registerUser, adminLogin};

@@ -5,29 +5,34 @@ import connectDB from './config/mongodb.js';
 import connectCloudinary from './config/cloudinary.js';
 import userRouter from './routes/userRoute.js';
 import productRouter from './routes/productRoute.js';
+
 // App configuration
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
+
+// Connect to the database and cloudinary
 connectDB();
 connectCloudinary();
 
-// middleware setup
+// Middleware setup
 app.use(express.json());
+
+// Enable CORS for all routes
 app.use(cors());
 
 
-// api endpoints
-app.use('api/user', userRouter)
+// Api endpoints
+app.use('/api/user', userRouter)
 app.use('/api/product', productRouter)
 
 
-
+// Default route
 app.get('/', (req, res)=>{
-    res.send('Hello World1233456!!');
+    res.send('Hello World!.');
 })
 
 
 // start the server
 app.listen(PORT, ()=>{
-    console.log('Server is running on port', PORT);
+    console.log('Server is running on port: ' + PORT);
 })
