@@ -70,12 +70,31 @@ const listProduct = async (req, res)=>{
 
 // function for remove product
 const removeProduct = async(req, res)=>{
+    try {
+        await productModel.findByIdAndDelete(req.body.id);
+        res.json({success:true, msg:"Product removed successfully!"});s
+        
+    } catch (error) {
+        console.log(error)
+        res.json({success:false, msg:'Internal Server Error'});
+    }
 
 }
 
 
 // function for single product
 const singleProduct = async(req, res)=>{
+
+    try {
+        const {productId} = req.body;
+        const singleProduct = await productModel.findById(productId);
+        res.json({success:true, product:singleProduct});
+        
+    } catch (error) {
+        console.log(error);
+        res.json({success:false, msg:"Internal Server Error"});;
+        
+    }
 
 }
 
