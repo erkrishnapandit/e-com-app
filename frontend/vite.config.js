@@ -12,10 +12,11 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ''),
       }
     },
-    port: 3030,
+    port: 5173,
   },
   plugins: [
     react(),
     tailwindcss()
   ],
+  
 })
