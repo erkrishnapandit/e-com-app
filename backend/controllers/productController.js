@@ -23,11 +23,11 @@ const addProduct = async (req, res)=>{
         const productData = {
             name,
             description,
-            category,
             price:Number(price),
+            category,
             subCategory, 
-            bestseller: bestseller === "true" ? true : false,
             sizes: JSON.parse(size),
+            bestseller: bestseller === "true" ? true : false,
             image:imagesUrl,
             date:Date.now()
         }
