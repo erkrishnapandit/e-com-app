@@ -4,7 +4,13 @@
 *{
     font-family: outfit, sans-serif;
 }
+
+select,input,textarea{
+    border:1px solid rgb(101, 101, 101);
+    border-radius: 5px;
+    outline-color: rgb(50, 50, 50);
+}
 .active{
     background-color: rgb(255, 240, 220);
-    border-color: rgb(82, 82, 82);
+    border-color: rgb(80, 80, 80);
 }

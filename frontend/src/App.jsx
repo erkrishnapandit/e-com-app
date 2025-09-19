@@ -1,45 +1,42 @@
-import React from 'react';
+import React from "react";
 // import image1 from './assets/clothing.jpg';
-import {assets} from './assets/assets.js';
-import {Routes, Route} from 'react-router-dom';
-import Navbar from './components/Navbar.jsx'
-import Home from './pages/Home.jsx';
-import About from './pages/About.jsx';
-import Cart from './pages/Cart.jsx';
-import Collection from './pages/Collection.jsx';
-import Contact from './pages/Contact.jsx';
-import Login from './pages/Login.jsx';
-import Order from './pages/Order.jsx';
-import Product from './pages/Product.jsx';
-import PlaceOrder from './pages/PlaceOrder.jsx';
-import Footer from './components/Footer.jsx';
-import SearchBar from './components/SearchBar.jsx';
-import { ToastContainer, toast } from 'react-toastify';
-
-
-
+import { assets } from "./assets/assets.js";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Cart from "./pages/Cart.jsx";
+import Collection from "./pages/Collection.jsx";
+import Contact from "./pages/Contact.jsx";
+import Login from "./pages/Login.jsx";
+import Order from "./pages/Order.jsx";
+import Product from "./pages/Product.jsx";
+import PlaceOrder from "./pages/PlaceOrder.jsx";
+import Footer from "./components/Footer.jsx";
+import SearchBar from "./components/SearchBar.jsx";
+import { ToastContainer, toast } from "react-toastify";
 
 function App() {
   return (
-   <div className='px-4 sm:px-[4vw] md:px-[6vw]  lg:px-[8vw]'>
-    {/* <h1>App component</h1> */}
-    <ToastContainer/>
-    <Navbar/>
-    <SearchBar/>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/about' element={<About/>}/>
-      <Route path='/cart' element={<Cart/>}/>
-      <Route path='/collection' element={<Collection/>}/>
-      <Route path='/contact' element={<Contact/>}/>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/order' element={<Order/>}/>
-      <Route path='/product/:productId' element={<Product/>}/>
-      <Route path='/place-order' element={<PlaceOrder/>}/>
-    </Routes>
-    <Footer/>
-   </div>
-  )
+    <div className="px-4 sm:px-[4vw] md:px-[6vw]  lg:px-[8vw]">
+      {/* <h1>App component</h1> */}
+      <ToastContainer />
+      <Navbar />
+      <SearchBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/product/:productId" element={<Product />} />
+        <Route path="/place-order" element={<PlaceOrder />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
