@@ -14,7 +14,7 @@ const Navbar = ()=>{
             <Link to='/'>
                 <img src={assets.logo_richlook} className='w-36' alt="logo" />
             </Link> 
-            <ul className='hidden sm:flex items-center justify-between gap-5 p-5 test-black'>
+            <ul className='hidden sm:flex items-center justify-between gap-5 p-5 text-black'>
 
                 <NavLink to='/' className='flex flex-col text-black  '>
                     <p >HOME</p>

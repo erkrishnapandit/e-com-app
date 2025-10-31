@@ -1,7 +1,10 @@
 import React, {useState} from "react";
 import { assets } from "../assets/assets";
+import axios from "axios";
+import { backendUrl } from "../App";
+import {toast} from "react-toastify";
 
-const Add = () => {
+const Add = ({token}) => {
 
     const [image1, setImage1] = useState(false);
     const [image2, setImage2] = useState(false);
@@ -16,8 +19,46 @@ const Add = () => {
     const [productCategory, setProductCategory] = useState("Men");
     const [productSubCategory, setProductSubCategory] = useState("Topwear");
 
-    const onSubmitHandler = ()=>{
+    const onSubmitHandler = async(e)=>{
       e.preventDefault();
+      try {
+        const formData = new FormData();
+        formData.append("ProductName", productName);
+        formData.append("ProductDesc", productDesc);
+        formData.append("ProductPrice", productPrice);
+        formData.append("ProductCategory", productCategory);
+        formData.append("ProductSubCategory", productSubCategory);
+        formData.append("ProductSize", JSON.stringify(productSize));
+        formData.append("BestSeller", bestSeller);
+
+        image1 && formData.append("image1", image1[0]);
+        image2 && formData.append("image2", image2[0]);
+        image3 && formData.append("image3", image3[0]);
+        image4 && formData.append("image4", image4[0]);
+
+        const response = await axios.post(backendUrl + "/api/product/add", formData, {headers:{token}});
+        console.log(response.data);
+        if(response.data.success){
+          toast.success(response.data.message);
+          setProductName("");
+          setProductDesc("");
+          setProductPrice("");
+          setProductSize([]);
+          setBestSeller(false);
+          setImage1(false);
+          setImage2(false);
+          setImage3(false);
+          setImage4(false);
+        }else{
+          toast.error(response.data.message);
+          alert(response.data.message);
+        }
+        
+      } catch (error) {
+        console.log(error);
+        toast.error(error.massage);
+        
+      }
     }
 
   return (
